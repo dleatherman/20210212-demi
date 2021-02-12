@@ -1,0 +1,62 @@
+@font-face {
+   font-family: PostGrotesk;
+   src: url('../fonts/postgrotesk-light.woff2') format("woff2"),
+   url('../fonts/postgrotesk-light.woff') format("woff");
+   font-weight: 300;
+   font-display: swap;
+}
+@font-face {
+   font-family: PostGrotesk;
+   src: url('../fonts/postgrotesk-medium.woff2') format("woff2"),
+   url('../fonts/postgrotesk-medium.woff') format("woff");
+   font-weight: 400;
+   font-display: swap;
+}
+
+:root {
+   --primary-font: PostGrotesk, Helvetica, sans-serif;
+   --primary-font-weight: 400;
+   --secondary-font-weight: 300;
+}
+
+html {
+   height: 100%;
+}
+
+body {
+   font-family: var(--primary-font);
+   font-size: 62.5%;
+   font-weight: var(--primary-font-weight);
+   min-height: 100%;
+}
+
+img {
+   height: auto;
+   max-width: 100%;
+}
+
+p {
+   font-weight: var(--secondary-font-weight);
+}
+
+/* <ul> */
+.flex-container {
+   align-items: center;
+   background-color: #000;
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: center;
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+
+.flex-container > li {
+   background-color: limegreen;
+   box-shadow: inset 1px 1px 0 #fff;
+   flex: 1 1 calc(100% / 3);
+   /* flex-shrink: 1;
+   flex-grow: 1;
+   flex-basis: calc(100% / 3); */
+   padding: 1rem 0;
+}
